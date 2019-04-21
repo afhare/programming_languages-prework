@@ -41,7 +41,7 @@ def reformat_languages(languages)
     languages[org].each do |lanuguage, details|
       details.each do |key, value|
         if key == :type
-          new_hash[language] = { :type => value}
+          new_hash[language] = {:type => value}
         end
       end
     end
