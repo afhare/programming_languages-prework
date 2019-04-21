@@ -33,9 +33,18 @@ languages = {
 def reformat_languages(languages)
   new_hash = {}
   
-  languages.each do |type,language|
-    languages[type].each do |language,details|
-      new_hash[language]
+  languages.each do |org,language|
+    languages[org].each do |language,details|
+      new_hash[:language]
+      end
+      
+    languages[org].each do |lanuguage, details|
+      details.each do |key, value|
+        if key == :type
+          new_hash[language] = { :type => value}
+        end
+      end
     end
-end
+  end
+  
 end
